@@ -3,8 +3,8 @@
 	<servers>
 		<server>
 			<id>mule-ee-releases</id>
-			<username>name</username>
-			<password>password</password>
+			<username>adam.davis</username>
+			<password>Password99</password>
 		</server>
 	</servers>
 	<profiles>
