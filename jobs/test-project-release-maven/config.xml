@@ -6,12 +6,12 @@
   <properties/>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.5">
     <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/adamsdavis1976/mule-test.git</url>
-        <credentialsId>103e9ab4-5a10-4541-ab8b-98fac6fb5ba8</credentialsId>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
+	<userRemoteConfigs>
+		<hudson.plugins.git.UserRemoteConfig>
+			<url>https://github.com/adamsdavis1976/mule-test.git</url>
+			<credentialsId>3ed6e32a-f942-4056-86a6-b4d9b3713c0c</credentialsId>
+		</hudson.plugins.git.UserRemoteConfig>
+	</userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
         <name>${GIT_COMMIT}</name>
