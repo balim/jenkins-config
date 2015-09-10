@@ -18,7 +18,7 @@
 		</server>
 	    <server>
 			<id>github-scm-server</id>
-			<username>github-test-user</username>
+			<username>my-github-test-user</username>
 			<password>password99</password>  
 		</server>   
 	</servers>
