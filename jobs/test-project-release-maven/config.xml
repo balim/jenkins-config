@@ -37,7 +37,7 @@
     <artifactId>test-mule</artifactId>
   </rootModule>
   <rootPOM>test-mule/pom.xml</rootPOM>
-  <goals>clean release:clean release:prepare -Dskip.deploy.nexus=true -Dusername=my-github-test-user -Dpassword=password99</goals>
+  <goals>clean release:clean release:prepare -Dskip.deploy.nexus=false</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
