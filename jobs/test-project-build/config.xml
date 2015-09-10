@@ -4,12 +4,11 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.5">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>https://github.com/adamsdavis1976/mule-test.git</url>
-        <credentialsId>103e9ab4-5a10-4541-ab8b-98fac6fb5ba8</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -32,7 +31,8 @@
     <artifactId>test-mule</artifactId>
   </rootModule>
   <rootPOM>test-mule/pom.xml</rootPOM>
-  <goals>clean verify -P ci</goals>
+  <goals>clean deploy</goals>
+  <mavenOpts>-Dskip.soapui.test=false -Dskip.deploy.nexus=true</mavenOpts>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
@@ -49,9 +49,9 @@
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
   <publishers>
-    <au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger plugin="build-pipeline-plugin@1.4.7">
+    <au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger plugin="build-pipeline-plugin@1.4.8">
       <configs>
-        <hudson.plugins.git.GitRevisionBuildParameters plugin="git@2.3.5">
+        <hudson.plugins.git.GitRevisionBuildParameters plugin="git@2.4.0">
           <combineQueuedCommits>false</combineQueuedCommits>
         </hudson.plugins.git.GitRevisionBuildParameters>
       </configs>
