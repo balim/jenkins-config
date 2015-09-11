@@ -40,7 +40,7 @@
 				
 				<!--SOAP UI configuration -->
 				<soapui.projectFile>src/test/resources/integtests/soapui-project.xml</soapui.projectFile>
-				<soapui.endpoint.hostname>localhost</soapui.endpoint.hostname>
+				<soapui.endpoint.hostname>mule-1</soapui.endpoint.hostname>
 				<soapui.endpoint.port>8081</soapui.endpoint.port>
 				<soapui.endpoint.username/>
 				<soapui.endpoint.password/>
@@ -72,7 +72,7 @@
 				
 				<!--SOAP UI configuration -->
 				<soapui.projectFile>src/test/resources/integtests/soapui-project.xml</soapui.projectFile>
-				<soapui.endpoint.hostname>testdomain.cloudhub.io</soapui.endpoint.hostname>
+				<soapui.endpoint.hostname>mytestdomain.cloudhub.io</soapui.endpoint.hostname>
 				<soapui.endpoint.port>80</soapui.endpoint.port>
 				<soapui.endpoint.username/>
 				<soapui.endpoint.password/>
@@ -80,7 +80,7 @@
 				<!--cloudhib deploy configuration-->
 				<cloudhub.username>name</cloudhub.username>
 				<cloudhub.password>password</cloudhub.password>
-				<cloudhub.domain>testdomain</cloudhub.domain>
+				<cloudhub.domain>mytestdomain</cloudhub.domain>
 				
 			</properties>
 		</profile>
@@ -100,15 +100,15 @@
 				
 				<!--SOAP UI configuration -->
 				<soapui.projectFile>src/test/resources/integtests/soapui-project.xml</soapui.projectFile>
-				<soapui.endpoint.hostname>localhost</soapui.endpoint.hostname>
-				<soapui.endpoint.port>8082</soapui.endpoint.port>
+				<soapui.endpoint.hostname>mule-1</soapui.endpoint.hostname>
+				<soapui.endpoint.port>8081</soapui.endpoint.port>
 				<soapui.endpoint.username/>
 				<soapui.endpoint.password/>
 				
 				<!--mmc deployment configuration-->
 				<!--note: currently maven mmc plugin does not support clusters-->
 				<mmc.app.dir>${project.basedir}/src/main/app</mmc.app.dir>
-				<mmc.url>http://localhost:8585/mmc-3.6.0/api</mmc.url>
+				<mmc.url>http://mmc:8080/mmc/api</mmc.url>
 				<mmc.username>admin</mmc.username>
 				<mmc.password>admin</mmc.password>
 				<mmc.serverGroup>qa</mmc.serverGroup>

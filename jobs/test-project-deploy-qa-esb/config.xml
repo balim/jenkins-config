@@ -12,7 +12,7 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.35">
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.36">
       <project>test-project-release-maven</project>
       <filter>**/target/*.zip</filter>
       <target></target>
@@ -23,7 +23,7 @@
       <doNotFingerprintArtifacts>true</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <org.jenkinsci.plugins.mulemmc.MMCDeployerBuilder plugin="mule-mmc@2.0-SNAPSHOT">
-      <mmcUrl>http://localhost:8585/mmc-3.6.0/api</mmcUrl>
+      <mmcUrl>http://mmc:8080/mmc/api</mmcUrl>
       <user>admin</user>
       <password>admin</password>
       <fileLocation>**/target/*.zip</fileLocation>
@@ -35,7 +35,7 @@
     </org.jenkinsci.plugins.mulemmc.MMCDeployerBuilder>
   </builders>
   <publishers>
-    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.26">
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.29">
       <configs>
         <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
           <configs class="empty-list"/>
@@ -47,7 +47,7 @@
     </hudson.plugins.parameterizedtrigger.BuildTrigger>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.25">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.28">
       <deleteDirs>false</deleteDirs>
       <cleanupParameter></cleanupParameter>
       <externalDelete></externalDelete>
