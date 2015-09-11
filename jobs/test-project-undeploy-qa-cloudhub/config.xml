@@ -13,7 +13,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>mvn -s ~/.m2/settings_ci.xml -P ch-qa  org.mule.tools.maven:cloudhub-maven-plugin:undeploy 
+      <command>mvn -P ch-qa  org.mule.tools.maven:cloudhub-maven-plugin:undeploy 
 
 
 </command>
@@ -21,7 +21,7 @@
   </builders>
   <publishers/>
   <buildWrappers>
-    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.25">
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.28">
       <deleteDirs>false</deleteDirs>
       <cleanupParameter></cleanupParameter>
       <externalDelete></externalDelete>
